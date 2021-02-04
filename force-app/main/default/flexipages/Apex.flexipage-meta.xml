@@ -11,8 +11,18 @@
             </componentInstance>
         </itemInstances>
         <itemInstances>
-                <componentInstance>
+            <componentInstance>
                 <componentName>apexWireMethodToFunction</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>apexWireMethodWithParams</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>apexWireMethodWithComplexParams</componentName>
             </componentInstance>
         </itemInstances>
         <name>region2</name>
@@ -26,7 +36,13 @@
         </itemInstances>
         <itemInstances>
             <componentInstance>
-                <componentName>apexStaticSchema</componentName>
+                <componentName>apexImperativeMethodWithParams</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName
+                >apexImperativeMethodWithComplexParams</componentName>
             </componentInstance>
         </itemInstances>
         <name>region3</name>
@@ -35,23 +51,17 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>apexWireMethodWithParams</componentName>
+                <componentName>apexStaticSchema</componentName>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
-                <componentName>apexImperativeMethodWithParams</componentName>
+                <componentName>apexWireError</componentName>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
-                <componentName>apexWireMethodWithComplexParams</componentName>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName
-                >apexImperativeMethodWithComplexParams</componentName>
+                <componentName>apexImperativeError</componentName>
             </componentInstance>
         </itemInstances>
         <name>region4</name>
