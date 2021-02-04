@@ -31,4 +31,20 @@ public with sharing class ContactController {
             LIMIT 1
         ];
     }
+
+    // In order to demonstrate surfacing an error to LWC, this method always
+    // throws a custom Apex exception, which is handled in the component.
+    @AuraEnabled(Cacheable=true)
+    public static List<Contact> getContactError() {
+        List<Contact> contactList = new List<Contact>();
+        if (contactList.size() < 5) {
+            throw new CustomException(
+                'This is a custom Apex-generated error message.'
+            );
+        }
+        return contactList;
+    }
+
+    public class CustomException extends Exception {
+    }
 }
