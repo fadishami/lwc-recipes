@@ -1,13 +1,21 @@
 <template>
     <lightning-card title="ApexImperativeError" icon-name="custom:custom63">
-        <template if:true={contact.data}>
-            <div class="slds-var-m-around_medium">This should not appear.</div>
-            <!-- ToDo: add button to invoke apex and make message appear.  -->
-        </template>
-        <template if:true={contact.error}>
-            <c-error-panel errors={contact.error}></c-error-panel>
-        </template>
-        <c-view-source source="lwc/apexError" slot="footer">
+        <div class="slds-var-m-around_medium">
+            <p class="slds-var-m-bottom_small">
+                <lightning-button
+                    label="Throw Error"
+                    onclick={handleButtonClick}
+                ></lightning-button>
+            </p>
+            <template if:true={contact}>
+                <div>This should not appear.</div>
+            </template>
+            <template if:true={error}>
+                <c-error-panel errors={error}></c-error-panel>
+            </template>
+        </div>
+
+        <c-view-source source="lwc/apexImperativeError" slot="footer">
             Display error message from imperative Apex method invocation.
         </c-view-source>
     </lightning-card>
