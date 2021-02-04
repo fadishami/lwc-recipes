@@ -1,3 +1,6 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, wire } from 'lwc';
+import getContactError from '@salesforce/apex/ContactController.getContactError';
 
-export default class ApexWireError extends LightningElement {}
+export default class ApexWireError extends LightningElement {
+    @wire(getContactError) contact;
+}
